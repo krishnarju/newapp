@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('checkout') {
             steps {
-                git clone "https://github.com/krishnarju/newapp.git"
+               git branch: 'main', credentialsId: 'krish', url: 'https://github.com/krishnarju/newapp.git'
             }
         }
         stage('build') {
